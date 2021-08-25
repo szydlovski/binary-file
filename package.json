@@ -4,11 +4,17 @@
   "description": "utility for reading and writing binary files",
   "main": "build/index.js",
   "dependencies": {},
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+    "typescript": "^4.3.5"
   },
-  "keywords": [],
+  "scripts": {
+    "build": "tsc"
+  },
+  "type": "module",
+  "keywords": [
+    "binary"
+  ],
+  "repository": "https://github.com/szydlovski/binary-file",
   "author": {
     "name": "Kamil Szydlowski",
     "email": "kamil.szydlovski@gmail.com",
