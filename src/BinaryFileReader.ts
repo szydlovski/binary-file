@@ -1,6 +1,5 @@
 import {
 	decodeString,
-	getBytesPerChar,
 	StringEncoding,
 } from './helpers/stringEncoding.js';
 
@@ -95,11 +94,8 @@ export class BinaryFileReader {
 	public readUint8() {
 		return this.read((position) => this.view.getUint8(position), 1);
 	}
-	public readString(length: number, encoding: StringEncoding = 'utf8') {
-		return decodeString(
-			this.nextBytes(length * getBytesPerChar(encoding)),
-			encoding
-		);
+	public readString(byteLength: number, encoding: StringEncoding = 'utf8') {
+		return decodeString(this.nextBytes(byteLength), encoding);
 	}
 	public readBytesAsUInt(byteLength: number, littleEndian = false) {
 		switch (byteLength) {

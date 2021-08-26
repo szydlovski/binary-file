@@ -45,12 +45,3 @@ export function decodeString(input: ArrayBuffer, encoding: StringEncoding = 'utf
     default: throw new Error(`Unknown string encoding "${encoding}"`);
   }
 }
-
-export function getBytesPerChar(encoding: StringEncoding) {
-  switch (encoding) {
-    case 'utf8': return 1;
-    case 'utf16le':
-    case 'utf16be': return 2;
-    default: throw new Error(`Unknown string encoding "${encoding}"`);
-  }
-}
