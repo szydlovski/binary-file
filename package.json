@@ -1,6 +1,6 @@
 {
   "name": "@szydlovski/binary-file",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "utility for reading and writing binary files",
   "main": "build/index.js",
   "dependencies": {},

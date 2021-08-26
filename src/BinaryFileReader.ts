@@ -97,7 +97,7 @@ export class BinaryFileReader {
 	public readString(byteLength: number, encoding: StringEncoding = 'utf8') {
 		return decodeString(this.nextBytes(byteLength), encoding);
 	}
-	public readUInt(byteLength: number, littleEndian = false) {
+	public readUint(byteLength: number, littleEndian = false) {
 		switch (byteLength) {
 			case 1:
 				return this.readUint8();
