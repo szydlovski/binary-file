@@ -97,7 +97,7 @@ export class BinaryFileReader {
 	public readString(byteLength: number, encoding: StringEncoding = 'utf8') {
 		return decodeString(this.nextBytes(byteLength), encoding);
 	}
-	public readBytesAsUInt(byteLength: number, littleEndian = false) {
+	public readUInt(byteLength: number, littleEndian = false) {
 		switch (byteLength) {
 			case 1:
 				return this.readUint8();
@@ -111,7 +111,7 @@ export class BinaryFileReader {
 				throw new Error(`Unknown integer byte length ${byteLength}`);
 		}
 	}
-	public readBytesAsFloat(byteLength: number, littleEndian = false) {
+	public readFloat(byteLength: number, littleEndian = false) {
 		switch (byteLength) {
 			case 4:
 				return this.readFloat32(littleEndian);
