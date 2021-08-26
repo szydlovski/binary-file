@@ -3,7 +3,7 @@ import { swap16 } from "./misc.js";
 export type StringEncoding = 'utf8' | 'utf16le' | 'utf16be';
 
 function encodeUtf8(input: string) {
-  return new TextEncoder().encode(input);
+  return new TextEncoder().encode(input).buffer;
 }
 
 function decodeUtf8(input: ArrayBuffer) {
