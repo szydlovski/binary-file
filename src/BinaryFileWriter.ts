@@ -1,5 +1,5 @@
-import { encodeString, StringEncoding } from "./helpers/stringEncoding";
-import { concatBuffers } from "./helpers/misc";
+import { encodeString, StringEncoding } from "./helpers/stringEncoding.js";
+import { concatBuffers } from "./helpers/misc.js";
 
 export class BinaryFileWriter {
 	#buffer: ArrayBuffer;
